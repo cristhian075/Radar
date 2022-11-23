@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.59a0347c.css",
+    "main.js": "/static/js/main.8a8eadca.js",
+    "static/media/radar2.PNG": "/static/media/radar2.3d64b67061c7a0e81dd2.PNG",
+    "index.html": "/index.html",
+    "main.59a0347c.css.map": "/static/css/main.59a0347c.css.map",
+    "main.8a8eadca.js.map": "/static/js/main.8a8eadca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59a0347c.css",
+    "static/js/main.8a8eadca.js"
+  ]
+}
