@@ -1,38 +1,21 @@
-//importaciones de las librerias
-import express from 'express';
-import morgan from 'morgan';
-import bodyParser from 'body-parser';
-import helmet from 'helmet';
-import cors from 'cors'
-import path from 'path';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Mapa from './vistas/mapa'
 
-//creando el servidor
-const app = express();
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json());
-app.use(morgan('dev'));
-app.use(helmet());
-app.use(cors());
+import Nombre from './vistas/nombre'
 
 
+function App() {
+  return (
 
-//rutas
-app.get('/', (req, res) => {
-    res.json({
-        "Login Api node": {
-            "inf":"demo Api loginDemo, con node, mongoose y jwt"
-        },
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Nombre} />
+        <Route exact path="/mapa" component={Mapa} />
 
-    })
-});
+      </Switch>
+    </BrowserRouter>
+  );
+}
 
-
-//importaciones de las rutas
-
-import DataRouter from './routes/data.router';
-
-
-app.use('/api',DataRouter);
-
-//exportando el app
-module.exports = app;
+export default App;

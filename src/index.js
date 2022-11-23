@@ -1,9 +1,21 @@
-import app from './app';
-import conf from './config';
-import './database';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 
-//inicando el servidor
 
-app.listen(conf.port, () => {
-    console.log(`server http://localhost:${conf.port}/`);
-})
+if(!navigator.geolocation){
+  alert('Tu navegador no tiene geolocation');
+  throw new Error('tu navegador no tiene geolocation');
+}
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
